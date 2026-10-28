@@ -52,9 +52,10 @@ zuletzt angebunden.
 
 ### Phase 0 – Sichern
 - [x] Repo `tobiasrisel/Cremconnect-Elementscout` angelegt (README, diese Datei als `CLAUDE.md`) – 28.10.2026.
-- [ ] Mir die Schritte nennen, um ElementScout in Lovable mit GitHub zu verbinden (mache ich selbst).
-- [ ] Preisregeln und Preisdeckel aus `analyze-component/index.ts` als JSON/CSV extrahieren
-      (`seed/altbestand_preise.json`), Quelle „Altbestand 2024/2025“.
+- [x] Schritte zum Verbinden von ElementScout mit GitHub genannt – siehe `docs/phase0.md` (Tobias macht es selbst).
+- [x] Preisregeln und Preisdeckel extrahiert: `seed/altbestand_preise.json` – 67 Herstellerregeln
+      (23 Hersteller) + 6 Preisdeckel, Quelle „Altbestand 2024/2025“, Commit ed03c8f0. Erzeugt mit
+      `scripts/altbestand_export.mjs` aus `scripts/altbestand_quelle.ts`.
 
 **Abnahme:** Repo existiert, Seed-Datei vollständig (Anzahl Regeln = Anzahl im Code).
 
@@ -71,6 +72,11 @@ Schemas (Namen als Vorschlag, Begründung bei Abweichung):
 - `map` – Zuordnungen zu DIN 276, GEFMA/FAC-ID und später `tdd.elementtyp` (keine harten
   Fremdschlüssel nach cc-core).
 - `ops` – Crawl-Läufe, Fehler, Kennzahlen.
+- `lern` – Lernspeicher für ElementScout (`learning_cases`, `qualification_patterns`,
+  RPCs `match_learning_cases`, `bump_qualification_pattern`, privater Bucket `learning-images`),
+  passend zu `_shared/learning-store.ts`. 3072-dim Embeddings → `halfvec` für den HNSW-Index (E9).
+- `einstellung` – Schwellen und Schalter (z. B. Auto-Freigabe ab 0,80, E6), Modellwahl je Aufgabe (E5).
+- Fachartikel/Wiki: separate Datenbank (E8) – Form noch offen.
 
 **Abnahme:** ER-Diagramm + Migrationen im Repo, RLS aktiv, Supabase-Advisors ohne kritische Befunde,
 Seed aus Phase 0 eingespielt.
@@ -84,6 +90,12 @@ Seed aus Phase 0 eingespielt.
 6. Prüfregeln: Einheit vorhanden, Plausibilitätsbereich, Dubletten (Hersteller + Typ),
    Widerspruch zu vorhandenem Fakt markieren.
 7. Überwachung: Lauf-Protokoll, Fehlerquote, neue Fakten pro Woche.
+8. Freigabe: Konfidenz ≥ 0,80 automatisch freigegeben; Rest im **täglichen Bericht neuer Dokumente** (E6).
+9. **Management-Oberfläche als eigenes Projekt** (E4): Quellen/Datentöpfe anlegen, Takt, Crawl-Regeln,
+   aktiv/inaktiv, Modellwahl, Lauf-Protokoll. Getrennt vom ElementScout-Projekt.
+
+Suchumfang nach dem Start: DIN 276 KG 300–500 entlang der Registerstruktur und alles fachlich
+Zugehörige (E7).
 
 Startumfang: Hersteller Wilo, Grundfos, Viessmann, Buderus, Vaillant, Kermi, Zehnder, Geberit,
 Grohe, Danfoss – deren Datenblätter und Ausschreibungstexte. Kostenkennwerte zunächst nur aus
@@ -102,15 +114,18 @@ rückverfolgbar; Fehlerquote dokumentiert.
 Phase 4 (Wissens-API + ElementScout umstellen) und Phase 5 (Cremconnect-Anbindung) werden
 erst nach Abnahme von Phase 3 gebrieft.
 
-## Offene Entscheidungen (vor Start klären, nicht selbst entscheiden)
+## Entscheidungen
 
-1. Wissens-DB in `juluzutgabkiqnoaggxe` oder neues Projekt?
-2. Firecrawl (Dienst) oder eigener Worker?
-3. Original-PDFs dauerhaft speichern oder nur Fakten + Link + Hash?
-4. KI für Extraktion: Lovable-Gateway oder direkt beim Anbieter?
-5. Wer gibt frei, ab welcher Konfidenz automatisch?
+Getroffen am 28.10.2026, verbindlich: siehe `docs/entscheidungen.md` (E1–E11).
+Kurz: Wissens-DB in `juluzutgabkiqnoaggxe`, Firecrawl + eigene Management-Oberfläche,
+Original-PDFs speichern, Auto-Freigabe ab 0,80 sonst Tagesbericht, Umfang KG 300–500,
+Fachartikel separat, Lernspeicher einrichten, KI direkt beim Anbieter (Claude/OpenAI/Gemini).
 
-## Erster Schritt
+Noch offen (nicht selbst entscheiden):
+1. KI: mit welchem Anbieter starten, liegen API-Schlüssel vor? (E5)
+2. „Registerstruktur“ = `tdd.elementtyp` in cc-core? (E7)
+3. Fachartikel: eigenes Supabase-Projekt oder eigenes Schema? (E8)
 
-Lies diese Datei, prüfe die Ausgangslage (Lovable-Dateien, beide Supabase-Projekte nur lesend),
-stelle mir die offenen Entscheidungen als kurze Rückfrage und starte dann Phase 0.
+## Nächster Schritt
+
+Phase 0 ist umgesetzt und wartet auf Abnahme. Danach Phase 1 (Datenmodell inkl. Lernspeicher).

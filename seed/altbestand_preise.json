@@ -1,0 +1,755 @@
+{
+  "quelle": {
+    "bezeichnung": "Altbestand 2024/2025",
+    "herkunft": "ElementScout (Lovable) supabase/functions/analyze-component/index.ts",
+    "commit": "ed03c8f012b65fac5980930f24b7f7c2735cbd1b",
+    "stand_code": "2026-10-24",
+    "hinweis": "Werte ohne Einzelbeleg aus CREMConnect 2024/2025 übernommen; Status 'roh', Nachweis über Crawler nötig.",
+    "waehrung": "EUR",
+    "basis": "netto"
+  },
+  "anzahl": {
+    "herstellerregeln": 67,
+    "preisdeckel": 6
+  },
+  "herstellerregeln": [
+    {
+      "id": "087fbfd0-de9b-540c-9946-08fdcf33595f",
+      "reihenfolge": 1,
+      "hersteller": "Wilo",
+      "muster": "stratos\\s+pico\\s+plus.*25\\/1-6",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 900,
+      "ersatzkosten_netto_max": 1240,
+      "status": "roh"
+    },
+    {
+      "id": "e6c3b163-7de5-57de-88c1-10ff4b4cb93c",
+      "reihenfolge": 2,
+      "hersteller": "Wilo",
+      "muster": "stratos\\s+pico\\s+plus.*25\\/1-4",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 750,
+      "ersatzkosten_netto_max": 1005,
+      "status": "roh"
+    },
+    {
+      "id": "532539fa-ee5b-55bb-adc3-12f6198a71e9",
+      "reihenfolge": 3,
+      "hersteller": "Wilo",
+      "muster": "stratos\\s+pico\\s+plus.*25\\/0,?5-6",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 655,
+      "ersatzkosten_netto_max": 910,
+      "status": "roh"
+    },
+    {
+      "id": "f4679e21-3587-592d-aac2-4fdd7ea04134",
+      "reihenfolge": 4,
+      "hersteller": "Wilo",
+      "muster": "stratos\\s+pico\\s+plus.*25\\/0,?5-4",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 600,
+      "ersatzkosten_netto_max": 855,
+      "status": "roh"
+    },
+    {
+      "id": "f416fd84-375d-5a71-8455-a57a43ecc164",
+      "reihenfolge": 5,
+      "hersteller": "Wilo",
+      "muster": "yonos\\s+pico\\s+plus.*25\\/1-6",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 380,
+      "ersatzkosten_netto_max": 635,
+      "status": "roh"
+    },
+    {
+      "id": "6eb218a2-688a-5084-a87e-6f77db852d7e",
+      "reihenfolge": 6,
+      "hersteller": "Wilo",
+      "muster": "yonos\\s+pico\\s+plus.*25\\/1-4",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 320,
+      "ersatzkosten_netto_max": 575,
+      "status": "roh"
+    },
+    {
+      "id": "2a04a2e7-f216-5b89-a34b-dde7d5021aaf",
+      "reihenfolge": 7,
+      "hersteller": "Wilo",
+      "muster": "wilo.*stratos",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 680,
+      "ersatzkosten_netto_max": 935,
+      "status": "roh"
+    },
+    {
+      "id": "dc253baa-7686-5f80-ba55-0916133a0225",
+      "reihenfolge": 8,
+      "hersteller": "Wilo",
+      "muster": "wilo.*yonos",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 350,
+      "ersatzkosten_netto_max": 605,
+      "status": "roh"
+    },
+    {
+      "id": "85b2bb2b-1b30-5049-8652-084682b7e8fb",
+      "reihenfolge": 9,
+      "hersteller": "Wilo",
+      "muster": "\\bwilo\\b",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 500,
+      "ersatzkosten_netto_max": 800,
+      "status": "roh"
+    },
+    {
+      "id": "686b9471-b483-5da2-a3d3-1e912b60e968",
+      "reihenfolge": 10,
+      "hersteller": "Grundfos",
+      "muster": "alpha3.*25-40\\s*180",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 450,
+      "ersatzkosten_netto_max": 705,
+      "status": "roh"
+    },
+    {
+      "id": "d0e53ded-b458-5caa-9efa-86e396fea5ed",
+      "reihenfolge": 11,
+      "hersteller": "Grundfos",
+      "muster": "alpha3.*25-60\\s*180",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 480,
+      "ersatzkosten_netto_max": 735,
+      "status": "roh"
+    },
+    {
+      "id": "7408b2b6-706c-5001-86a6-4f1ca62a10de",
+      "reihenfolge": 12,
+      "hersteller": "Grundfos",
+      "muster": "alpha3.*25-80\\s*180",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 520,
+      "ersatzkosten_netto_max": 775,
+      "status": "roh"
+    },
+    {
+      "id": "090b868c-5552-5327-9736-266ea4bfc3ce",
+      "reihenfolge": 13,
+      "hersteller": "Grundfos",
+      "muster": "grundfos.*alpha",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 460,
+      "ersatzkosten_netto_max": 715,
+      "status": "roh"
+    },
+    {
+      "id": "3bf00eb3-cc71-573c-b53f-6841ecd2dd6c",
+      "reihenfolge": 14,
+      "hersteller": "Grundfos",
+      "muster": "grundfos.*magna",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 1250,
+      "ersatzkosten_netto_max": 1580,
+      "status": "roh"
+    },
+    {
+      "id": "ad647c34-37e6-51cf-b30a-13553492111b",
+      "reihenfolge": 15,
+      "hersteller": "Grundfos",
+      "muster": "grundfos.*ups",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 280,
+      "ersatzkosten_netto_max": 535,
+      "status": "roh"
+    },
+    {
+      "id": "b24dfe62-4ff9-5d13-9a2d-17b4530f0df3",
+      "reihenfolge": 16,
+      "hersteller": "Grundfos",
+      "muster": "grundfos",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 500,
+      "ersatzkosten_netto_max": 800,
+      "status": "roh"
+    },
+    {
+      "id": "2ec17abb-91b1-5f6c-b264-944c73d5a775",
+      "reihenfolge": 17,
+      "hersteller": "Viessmann",
+      "muster": "vitodens\\s*200",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 4800,
+      "ersatzkosten_netto_max": 6950,
+      "status": "roh"
+    },
+    {
+      "id": "4d7b4e3d-860c-5698-b007-3ab9aff3b498",
+      "reihenfolge": 18,
+      "hersteller": "Viessmann",
+      "muster": "vitodens\\s*300",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 5600,
+      "ersatzkosten_netto_max": 7850,
+      "status": "roh"
+    },
+    {
+      "id": "a11fbeff-05ad-5528-ab12-c977f36e93d5",
+      "reihenfolge": 19,
+      "hersteller": "Viessmann",
+      "muster": "vitodens\\s*100",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 3200,
+      "ersatzkosten_netto_max": 5100,
+      "status": "roh"
+    },
+    {
+      "id": "2998fcbe-e7b8-592f-ace4-b4186e0b0a82",
+      "reihenfolge": 20,
+      "hersteller": "Viessmann",
+      "muster": "vitocal\\s*200",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 8500,
+      "ersatzkosten_netto_max": 11200,
+      "status": "roh"
+    },
+    {
+      "id": "0d1b96be-fda5-56b9-b7fd-eeac79e3748d",
+      "reihenfolge": 21,
+      "hersteller": "Viessmann",
+      "muster": "vitocal\\s*250",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 9800,
+      "ersatzkosten_netto_max": 12800,
+      "status": "roh"
+    },
+    {
+      "id": "7a44d287-d5ba-52fb-8a19-be3cd301367a",
+      "reihenfolge": 22,
+      "hersteller": "Viessmann",
+      "muster": "vitocal\\s*300",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 12500,
+      "ersatzkosten_netto_max": 15800,
+      "status": "roh"
+    },
+    {
+      "id": "0d43b7d6-d8c3-5e48-a2af-3d3c4c7d1577",
+      "reihenfolge": 23,
+      "hersteller": "Viessmann",
+      "muster": "viessmann.*vitodens",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 4200,
+      "ersatzkosten_netto_max": 6250,
+      "status": "roh"
+    },
+    {
+      "id": "ba58bc18-4b3f-56c9-9902-d390338f2567",
+      "reihenfolge": 24,
+      "hersteller": "Viessmann",
+      "muster": "viessmann.*vitocal",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 9500,
+      "ersatzkosten_netto_max": 12500,
+      "status": "roh"
+    },
+    {
+      "id": "34234c4b-f64e-54b7-a89e-4489a6ae9979",
+      "reihenfolge": 25,
+      "hersteller": "Viessmann",
+      "muster": "viessmann.*vitoladens",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 5800,
+      "ersatzkosten_netto_max": 8200,
+      "status": "roh"
+    },
+    {
+      "id": "6d420f1e-d2dd-53ec-9e87-9080eeed4c5f",
+      "reihenfolge": 26,
+      "hersteller": "Viessmann",
+      "muster": "viessmann",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 4500,
+      "ersatzkosten_netto_max": 6600,
+      "status": "roh"
+    },
+    {
+      "id": "e38fbd84-04dd-59f8-9616-ee926a575a4a",
+      "reihenfolge": 27,
+      "hersteller": "Buderus",
+      "muster": "logamax\\s*plus\\s*gb172",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 3400,
+      "ersatzkosten_netto_max": 5350,
+      "status": "roh"
+    },
+    {
+      "id": "fe677ac8-3262-59b6-bb77-ca816007611f",
+      "reihenfolge": 28,
+      "hersteller": "Buderus",
+      "muster": "logamax\\s*plus\\s*gb192",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 4200,
+      "ersatzkosten_netto_max": 6250,
+      "status": "roh"
+    },
+    {
+      "id": "5aa29361-848f-5d6c-af03-d1cf81005663",
+      "reihenfolge": 29,
+      "hersteller": "Buderus",
+      "muster": "logano\\s*plus\\s*kb192",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 5800,
+      "ersatzkosten_netto_max": 8100,
+      "status": "roh"
+    },
+    {
+      "id": "1dc69ce8-d6ac-55b4-a152-1a2dafdb8722",
+      "reihenfolge": 30,
+      "hersteller": "Buderus",
+      "muster": "logatherm\\s*wlw",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 9200,
+      "ersatzkosten_netto_max": 12100,
+      "status": "roh"
+    },
+    {
+      "id": "d0f421bb-217f-59b1-a12c-a7aa44032102",
+      "reihenfolge": 31,
+      "hersteller": "Buderus",
+      "muster": "logatherm\\s*wps",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 11500,
+      "ersatzkosten_netto_max": 14800,
+      "status": "roh"
+    },
+    {
+      "id": "04f998b3-7fca-5491-8695-16f3b1815b6e",
+      "reihenfolge": 32,
+      "hersteller": "Buderus",
+      "muster": "buderus",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 4000,
+      "ersatzkosten_netto_max": 6050,
+      "status": "roh"
+    },
+    {
+      "id": "6f48d60b-33d9-5c16-896e-a1d197400756",
+      "reihenfolge": 33,
+      "hersteller": "Vaillant",
+      "muster": "ecotec\\s*plus",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 3800,
+      "ersatzkosten_netto_max": 5750,
+      "status": "roh"
+    },
+    {
+      "id": "fb4763fb-9dd4-5d52-baaf-4b01d3e4cf04",
+      "reihenfolge": 34,
+      "hersteller": "Vaillant",
+      "muster": "ecotec\\s*exclusive",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 4500,
+      "ersatzkosten_netto_max": 6600,
+      "status": "roh"
+    },
+    {
+      "id": "f27d561f-1bd7-5263-a637-b0e231ea5530",
+      "reihenfolge": 35,
+      "hersteller": "Vaillant",
+      "muster": "arotherm\\s*plus",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 9800,
+      "ersatzkosten_netto_max": 12800,
+      "status": "roh"
+    },
+    {
+      "id": "fdaa303e-9e48-5dce-97ea-8f63b430abee",
+      "reihenfolge": 36,
+      "hersteller": "Vaillant",
+      "muster": "vaillant",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 4200,
+      "ersatzkosten_netto_max": 6250,
+      "status": "roh"
+    },
+    {
+      "id": "e0216219-075b-5017-9c83-f9d2e7d00407",
+      "reihenfolge": 37,
+      "hersteller": "Wolf",
+      "muster": "\\bwolf\\b",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 3900,
+      "ersatzkosten_netto_max": 5850,
+      "status": "roh"
+    },
+    {
+      "id": "3ae00187-c617-5bfa-ae32-f8d25f5fa643",
+      "reihenfolge": 38,
+      "hersteller": "Junkers/Bosch",
+      "muster": "cerapur|junkers|bosch.*heiz",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 3600,
+      "ersatzkosten_netto_max": 5500,
+      "status": "roh"
+    },
+    {
+      "id": "3495c977-fc7b-594c-8519-c548e8876e4b",
+      "reihenfolge": 39,
+      "hersteller": "Schüco",
+      "muster": "sch(ü|u)co",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 600,
+      "ersatzkosten_netto_max": 950,
+      "status": "roh"
+    },
+    {
+      "id": "73c7f8ce-12d2-5b92-8db8-8e21b7b2e6c8",
+      "reihenfolge": 40,
+      "hersteller": "Hörmann",
+      "muster": "h(ö|o)rmann",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 1500,
+      "ersatzkosten_netto_max": 2100,
+      "status": "roh"
+    },
+    {
+      "id": "cd6f2ca6-76cb-5e6d-9ff2-004c5946058a",
+      "reihenfolge": 41,
+      "hersteller": "Grohe",
+      "muster": "grohe.*grohtherm",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 380,
+      "ersatzkosten_netto_max": 580,
+      "status": "roh"
+    },
+    {
+      "id": "faa8cfdc-0a16-5862-82b4-1ffa83587e0b",
+      "reihenfolge": 42,
+      "hersteller": "Grohe",
+      "muster": "grohe",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 200,
+      "ersatzkosten_netto_max": 380,
+      "status": "roh"
+    },
+    {
+      "id": "91cd2415-ddad-56af-ae57-8d5c5f3e0d32",
+      "reihenfolge": 43,
+      "hersteller": "Geberit",
+      "muster": "geberit.*duofix",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 280,
+      "ersatzkosten_netto_max": 520,
+      "status": "roh"
+    },
+    {
+      "id": "b6898e03-025d-541d-9756-1ca76cb088cf",
+      "reihenfolge": 44,
+      "hersteller": "Geberit",
+      "muster": "geberit.*sigma",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 150,
+      "ersatzkosten_netto_max": 320,
+      "status": "roh"
+    },
+    {
+      "id": "052366b1-7e4d-5418-81bc-0678405f3196",
+      "reihenfolge": 45,
+      "hersteller": "Geberit",
+      "muster": "geberit",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 220,
+      "ersatzkosten_netto_max": 420,
+      "status": "roh"
+    },
+    {
+      "id": "44fc6381-5c84-594e-9b81-b2c9e8424099",
+      "reihenfolge": 46,
+      "hersteller": "Danfoss",
+      "muster": "danfoss.*(ra-n|ra.*2000|eco|living)",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 85,
+      "ersatzkosten_netto_max": 175,
+      "status": "roh"
+    },
+    {
+      "id": "998ec3a3-5526-581c-b2b9-836eaa70f800",
+      "reihenfolge": 47,
+      "hersteller": "Danfoss",
+      "muster": "danfoss",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 180,
+      "ersatzkosten_netto_max": 350,
+      "status": "roh"
+    },
+    {
+      "id": "f30e48ae-fc64-56cb-a3f1-9a7de6533440",
+      "reihenfolge": 48,
+      "hersteller": "KSB",
+      "muster": "ksb",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 950,
+      "ersatzkosten_netto_max": 1380,
+      "status": "roh"
+    },
+    {
+      "id": "1b6def97-081e-5421-a93d-04f458b94c10",
+      "reihenfolge": 49,
+      "hersteller": "Stiebel-Eltron",
+      "muster": "stiebel",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 3500,
+      "ersatzkosten_netto_max": 5000,
+      "status": "roh"
+    },
+    {
+      "id": "7c5035df-ddea-5d01-9945-94fc0895a498",
+      "reihenfolge": 50,
+      "hersteller": "Daikin",
+      "muster": "daikin.*altherma",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 9800,
+      "ersatzkosten_netto_max": 12800,
+      "status": "roh"
+    },
+    {
+      "id": "b110e54e-97ff-5064-9d7d-a56c35ffb53f",
+      "reihenfolge": 51,
+      "hersteller": "Daikin",
+      "muster": "daikin",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 2500,
+      "ersatzkosten_netto_max": 3450,
+      "status": "roh"
+    },
+    {
+      "id": "59491af7-251f-5cd9-a1ba-2ed939bc5ac2",
+      "reihenfolge": 52,
+      "hersteller": "Zehnder",
+      "muster": "zehnder.*charleston",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 500,
+      "ersatzkosten_netto_max": 1000,
+      "status": "roh"
+    },
+    {
+      "id": "49fb82d2-1042-573d-a9ba-6c452108a9b0",
+      "reihenfolge": 53,
+      "hersteller": "Zehnder",
+      "muster": "zehnder.*nova",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 500,
+      "ersatzkosten_netto_max": 900,
+      "status": "roh"
+    },
+    {
+      "id": "b1676422-2271-5d6d-a9fb-3f933bf7dd5a",
+      "reihenfolge": 54,
+      "hersteller": "Zehnder",
+      "muster": "zehnder.*(fina|plano|yucca|metropolitan)",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 500,
+      "ersatzkosten_netto_max": 850,
+      "status": "roh"
+    },
+    {
+      "id": "598d2f93-5609-5bd5-b782-e4f4ea8161d3",
+      "reihenfolge": 55,
+      "hersteller": "Zehnder",
+      "muster": "zehnder.*comfoair",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 3200,
+      "ersatzkosten_netto_max": 4350,
+      "status": "roh"
+    },
+    {
+      "id": "9f98a526-a2b1-57b8-ad40-db04add24088",
+      "reihenfolge": 56,
+      "hersteller": "Zehnder",
+      "muster": "zehnder",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 500,
+      "ersatzkosten_netto_max": 900,
+      "status": "roh"
+    },
+    {
+      "id": "8e97918f-689f-5293-93cd-ed5e912db929",
+      "reihenfolge": 57,
+      "hersteller": "Kermi",
+      "muster": "kermi.*therm-?x2.*(profil|plan|line)",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 500,
+      "ersatzkosten_netto_max": 850,
+      "status": "roh"
+    },
+    {
+      "id": "fa3961aa-a9df-5afd-865f-e839de79b22c",
+      "reihenfolge": 58,
+      "hersteller": "Kermi",
+      "muster": "kermi.*verteo",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 500,
+      "ersatzkosten_netto_max": 900,
+      "status": "roh"
+    },
+    {
+      "id": "d1861f81-171a-5c4b-a7b2-423d310c24e6",
+      "reihenfolge": 59,
+      "hersteller": "Kermi",
+      "muster": "kermi.*basic-?50",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 280,
+      "ersatzkosten_netto_max": 520,
+      "status": "roh"
+    },
+    {
+      "id": "7e8f3466-0c03-5ab3-9a8d-15548ffc7336",
+      "reihenfolge": 60,
+      "hersteller": "Kermi",
+      "muster": "kermi.*(atea|pasa|raya)",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 500,
+      "ersatzkosten_netto_max": 950,
+      "status": "roh"
+    },
+    {
+      "id": "b9248525-0f72-5701-85b9-2d184c9763bc",
+      "reihenfolge": 61,
+      "hersteller": "Kermi",
+      "muster": "kermi",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 480,
+      "ersatzkosten_netto_max": 810,
+      "status": "roh"
+    },
+    {
+      "id": "72d04128-847c-53ff-908f-5698f95cf6f7",
+      "reihenfolge": 62,
+      "hersteller": "Oventrop",
+      "muster": "oventrop",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 75,
+      "ersatzkosten_netto_max": 155,
+      "status": "roh"
+    },
+    {
+      "id": "70d79d03-212a-57e8-b310-a891e98a966a",
+      "reihenfolge": 63,
+      "hersteller": "IMI Hydronic",
+      "muster": "(imi.*hydronic|heimeier|pneumatex|ta.*stad)",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 65,
+      "ersatzkosten_netto_max": 150,
+      "status": "roh"
+    },
+    {
+      "id": "1f8ff269-d800-5c33-8daf-76275f0cfa02",
+      "reihenfolge": 64,
+      "hersteller": "VELUX",
+      "muster": "velux",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 820,
+      "ersatzkosten_netto_max": 1330,
+      "status": "roh"
+    },
+    {
+      "id": "cf58dd9d-8275-5e4d-bae2-77a4dc42b28e",
+      "reihenfolge": 65,
+      "hersteller": "ROTO",
+      "muster": "\\broto\\b",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 650,
+      "ersatzkosten_netto_max": 1075,
+      "status": "roh"
+    },
+    {
+      "id": "c14dbd5d-669b-5b7a-9896-e27896d38734",
+      "reihenfolge": 66,
+      "hersteller": "Braas",
+      "muster": "braas",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 70,
+      "ersatzkosten_netto_max": 130,
+      "status": "roh"
+    },
+    {
+      "id": "90d31ebb-4a18-58cb-b478-19d6ca8b5513",
+      "reihenfolge": 67,
+      "hersteller": "Sto",
+      "muster": "\\bsto\\b|stotherm",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 210,
+      "ersatzkosten_netto_max": 265,
+      "status": "roh"
+    }
+  ],
+  "preisdeckel": [
+    {
+      "id": "7e458388-dc58-5361-ad42-2fd26239638c",
+      "reihenfolge": 1,
+      "bezeichnung": "Heizkörper Standard (Typ 22)",
+      "muster": "heizk(ö|o)rper|radiator|plattenheizk(ö|o)rper",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 500,
+      "ersatzkosten_netto_max": 900,
+      "quellenangabe_alt": "Herstellerdatenbank Heizkörper Typ 22 / Kermi / Zehnder 2024/2025 – Endkunde ≤ 500 € netto",
+      "status": "roh"
+    },
+    {
+      "id": "64ac08a2-91ca-5623-97b0-d3d9dc99fbfe",
+      "reihenfolge": 2,
+      "bezeichnung": "Thermostatventil",
+      "muster": "thermostatventil|thermostatkopf",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 150,
+      "ersatzkosten_netto_max": 300,
+      "quellenangabe_alt": "Herstellerdatenbank Heimeier / Danfoss / Oventrop 2024/2025",
+      "status": "roh"
+    },
+    {
+      "id": "21ccc37e-db8f-5580-9439-e350f58b45d8",
+      "reihenfolge": 3,
+      "bezeichnung": "Umwälzpumpe Standard",
+      "muster": "umw(ä|a)lzpumpe|zirkulationspumpe",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 900,
+      "ersatzkosten_netto_max": 1300,
+      "quellenangabe_alt": "Herstellerdatenbank Wilo / Grundfos 2024/2025",
+      "status": "roh"
+    },
+    {
+      "id": "0e1f61be-c76a-5a26-8088-2b6c4bdfad4a",
+      "reihenfolge": 4,
+      "bezeichnung": "Fenster Kunststoff Standard",
+      "muster": "kunststofffenster|fenster.*kunststoff",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 950,
+      "ersatzkosten_netto_max": 1300,
+      "quellenangabe_alt": "Endkundenpreise Kunststofffenster 3-fach 2024/2025",
+      "status": "roh"
+    },
+    {
+      "id": "20627aa0-1242-53fa-8b1c-79acb2a0437e",
+      "reihenfolge": 5,
+      "bezeichnung": "Innentür Standard",
+      "muster": "innent(ü|u)r",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 600,
+      "ersatzkosten_netto_max": 800,
+      "quellenangabe_alt": "Endkundenpreise Innentür + Zarge 2024/2025",
+      "status": "roh"
+    },
+    {
+      "id": "2baf0a52-5f1f-582f-817e-b2f0ca54201d",
+      "reihenfolge": 6,
+      "bezeichnung": "Ausdehnungsgefäß 25L",
+      "muster": "ausdehnungsgef(ä|a)(ss|ß)",
+      "muster_flags": "i",
+      "marktpreis_netto_max": 280,
+      "ersatzkosten_netto_max": 450,
+      "quellenangabe_alt": "Endkundenpreise MAG/AG 2024/2025",
+      "status": "roh"
+    }
+  ]
+}
