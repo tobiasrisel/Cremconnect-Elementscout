@@ -24,7 +24,8 @@ zuletzt angebunden.
 1. **Schritt für Schritt.** Jede Phase endet mit einer Abnahme gegen ihre Vorgabe.
    Erst nach meiner Freigabe geht es weiter. Zwischenstand kurz berichten, nicht weiterbauen.
 2. **Migrationen statt Klickerei.** Jede Schemaänderung als versionierte SQL-Migration im Repo
-   (`supabase/migrations/`), lokal mit Supabase CLI getestet, dann angewendet.
+   (`supabase/migrations/`), lokal getestet (`npm run test:db`, PGlite; Supabase CLI wenn verfügbar),
+   dann angewendet. Dateiname = Version in der DB-Historie (`list_migrations`).
 3. **Jede Zeile hat eine eindeutige ID** (UUID) und – wo fachlich – Quelle, Gültig-ab/-bis und
    Status (`roh` / `geprueft` / `freigegeben`).
 4. **Keine Zahl ohne Herkunft.** Jeder Kennwert, Preis oder Merkmal führt zurück auf
@@ -81,6 +82,9 @@ Schemas (Namen als Vorschlag, Begründung bei Abweichung):
 **Abnahme:** ER-Diagramm + Migrationen im Repo, RLS aktiv, Supabase-Advisors ohne kritische Befunde,
 Seed aus Phase 0 eingespielt.
 
+**Stand 29.10.2026:** umgesetzt und angewendet, wartet auf Abnahme – siehe `docs/phase1.md` und
+`docs/datenmodell.md`. Abweichungen: Quellenregister = `kw.quelle`, Kostenkennwerte bleiben in `kw` (E12, E13).
+
 ### Phase 2 – Crawler-Pipeline
 1. Planer: `pg_cron` stößt je Quelle nach Takt an.
 2. Abruf: Firecrawl oder eigener Worker; robots.txt, Drosselung, User-Agent mit Kontakt.
@@ -126,4 +130,5 @@ Offene Entscheidungen: keine (Stand 29.10.2026).
 
 ## Nächster Schritt
 
-Phase 0 ist umgesetzt und wartet auf Abnahme. Danach Phase 1 (Datenmodell inkl. Lernspeicher).
+Phase 0 und Phase 1 sind umgesetzt und warten auf Abnahme. Danach Phase 2 (Crawler-Pipeline,
+Register-Spiegelung, Zugriffsweg für die Management-Oberfläche).

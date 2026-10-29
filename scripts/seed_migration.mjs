@@ -1,4 +1,4 @@
-// Erzeugt supabase/migrations/20261029120800_seed_startdaten.sql aus seed/altbestand_preise.json
+// Erzeugt supabase/migrations/20261029002241_seed_startdaten.sql aus seed/altbestand_preise.json
 import { readFileSync, writeFileSync } from "node:fs";
 const s = JSON.parse(readFileSync("seed/altbestand_preise.json", "utf8"));
 const q = (v) => v === null || v === undefined ? "null" : `'${String(v).replace(/'/g, "''")}'`;
@@ -64,5 +64,5 @@ insert into ref.akteur_rolle (akteur_id, rolle_code, kontext)
 select a.id, 'hersteller', 'aus kw.hersteller' from ref.akteur a where a.kw_hersteller_id is not null
 on conflict do nothing;
 `;
-writeFileSync("supabase/migrations/20261029120800_seed_startdaten.sql", sql);
+writeFileSync("supabase/migrations/20261029002241_seed_startdaten.sql", sql);
 console.log("Regeln:", regeln.length, "davon Hersteller", s.herstellerregeln.length, "Deckel", s.preisdeckel.length);
