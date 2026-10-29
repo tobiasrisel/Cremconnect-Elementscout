@@ -1,0 +1,13 @@
+{
+  "name": "cremconnect-elementscout-wissen",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:db": "node tests/migrationen.test.mjs",
+    "seed:export": "node --experimental-strip-types scripts/altbestand_export.mjs",
+    "seed:migration": "node scripts/seed_migration.mjs"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.3.9"
+  }
+}

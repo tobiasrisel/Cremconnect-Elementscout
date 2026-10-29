@@ -14,7 +14,7 @@ zuletzt angebunden.
 ## Was NICHT zum Auftrag gehört
 
 - Keine mobilen Apps, keine Mandanten-Oberflächen.
-- Keine Schreibzugriffe auf `cc-core` (Cremconnect). Lesen nur, wenn ausdrücklich verlangt.
+- Keine Schreibzugriffe auf `cc-core` (Cremconnect). Lesen nur für das Register (E7) oder wenn ausdrücklich verlangt.
 - Keine Änderungen am Lovable-Projekt ElementScout, bevor Phase 3 abgenommen ist.
 - Keine lizenzpflichtigen Quellen crawlen (z. B. BKI, STLB-Bau, sirAdos). Im Zweifel: Quelle im
   Register anlegen, `aktiv = false`, und nachfragen.
@@ -44,7 +44,7 @@ zuletzt angebunden.
 | Fachlogik heute | Edge Function `supabase/functions/analyze-component/index.ts` (ca. 900 Zeilen) | Systemprompt, ~70 Herstellerpreis-Regeln, 6 Preisdeckel hart im Code |
 | Lernspeicher-Code | `supabase/functions/_shared/learning-store.ts` | Ziel-DB nicht auffindbar, vermutlich nie aktiv |
 | Cremconnect-Kern | Supabase `cc-core` (`xyyvahigowejjygaxhtk`) | Schemas `auf`, `org`, `ort`, `tdd`, `api` – nur lesen |
-| Leeres Projekt für Wissens-DB | Supabase `CC-Core-Reference-cost_database` (`juluzutgabkiqnoaggxe`, eu-central-1) | Kandidat für die Wissens-DB, Entscheidung offen |
+| Wissens-DB | Supabase `CC-Core-Reference-cost_database` (`juluzutgabkiqnoaggxe`, eu-central-1) | **nicht leer:** enthält Kennwert-DB `kw` – siehe `docs/befund_wissens_db.md` |
 | Crawler-Dienst | Firecrawl (als Connector verfügbar) | Alternative: eigener Worker |
 | Cremconnect-Code | GitHub `tobiasrisel/cremconnect-v2` | nicht anfassen |
 
@@ -69,14 +69,14 @@ Schemas (Namen als Vorschlag, Begründung bei Abweichung):
   Extraktionsmodell + Version, Konfidenz, Status.
 - `ref` – freigegebenes Wissen: Hersteller, Produkt, Produktmerkmal, Ausschreibungsposition,
   Kostenkennwert (Bezugseinheit, Region, Stand), Akteur.
-- `map` – Zuordnungen zu DIN 276, GEFMA/FAC-ID und später `tdd.elementtyp` (keine harten
-  Fremdschlüssel nach cc-core).
+- `map` – Zuordnungen zu DIN 276, GEFMA/FAC-ID und gespiegeltes Register aus cc-core
+  (technische Anlagen, Baugruppen, Elemente – E7; lesend, keine harten Fremdschlüssel nach cc-core).
 - `ops` – Crawl-Läufe, Fehler, Kennzahlen.
 - `lern` – Lernspeicher für ElementScout (`learning_cases`, `qualification_patterns`,
   RPCs `match_learning_cases`, `bump_qualification_pattern`, privater Bucket `learning-images`),
   passend zu `_shared/learning-store.ts`. 3072-dim Embeddings → `halfvec` für den HNSW-Index (E9).
 - `einstellung` – Schwellen und Schalter (z. B. Auto-Freigabe ab 0,80, E6), Modellwahl je Aufgabe (E5).
-- Fachartikel/Wiki: separate Datenbank (E8) – Form noch offen.
+- `wiki` – Fachartikel für das Wiki, getrennt vom übrigen Wissen (E8).
 
 **Abnahme:** ER-Diagramm + Migrationen im Repo, RLS aktiv, Supabase-Advisors ohne kritische Befunde,
 Seed aus Phase 0 eingespielt.
@@ -119,12 +119,10 @@ erst nach Abnahme von Phase 3 gebrieft.
 Getroffen am 28.10.2026, verbindlich: siehe `docs/entscheidungen.md` (E1–E11).
 Kurz: Wissens-DB in `juluzutgabkiqnoaggxe`, Firecrawl + eigene Management-Oberfläche,
 Original-PDFs speichern, Auto-Freigabe ab 0,80 sonst Tagesbericht, Umfang KG 300–500,
-Fachartikel separat, Lernspeicher einrichten, KI direkt beim Anbieter (Claude/OpenAI/Gemini).
+Fachartikel als Schema `wiki` in derselben DB, Lernspeicher einrichten, KI über das Lovable-Gateway mit
+Google Gemini, Suchumfang = alle technischen Anlagen, Baugruppen und Elemente aus cc-core (lesend).
 
-Noch offen (nicht selbst entscheiden):
-1. KI: mit welchem Anbieter starten, liegen API-Schlüssel vor? (E5)
-2. „Registerstruktur“ = `tdd.elementtyp` in cc-core? (E7)
-3. Fachartikel: eigenes Supabase-Projekt oder eigenes Schema? (E8)
+Offene Entscheidungen: keine (Stand 29.10.2026).
 
 ## Nächster Schritt
 
